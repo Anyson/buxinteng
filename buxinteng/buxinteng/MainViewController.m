@@ -49,12 +49,14 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     //    接受远程控制
+    [super viewDidAppear:animated];
     [self becomeFirstResponder];
     [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
     //    取消远程控制
+    [super viewDidDisappear:animated];
     [self resignFirstResponder];
     [[UIApplication sharedApplication] endReceivingRemoteControlEvents];
 }
