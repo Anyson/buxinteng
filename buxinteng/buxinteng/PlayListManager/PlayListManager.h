@@ -7,9 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PlayListItem.h"
 
 @interface PlayListManager : NSObject
 
 + (PlayListManager *)sharedInstance;
+
+- (void)loadData;
+- (PlayListItem *)getRandomItem;
+- (NSString *)getLrcText:(PlayListItem *)item;
+
+- (BOOL)isPlayListEmpty;
+- (void)like:(PlayListItem *)item;
+- (void)dislike:(PlayListItem *)item;
+- (void)hate:(PlayListItem *) item;
 
 @end

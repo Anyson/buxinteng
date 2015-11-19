@@ -35,12 +35,14 @@
 }
 
 - (void)setupViews {
-    _lrcLabel = [Common generateLabelWithText:@""
+    _lrcLabel = [Common generateLabelWithText:@" "
                                 textAlignment:NSTextAlignmentCenter
                                          font:FONT(17)
                                     textColor:RGB_TEXT_COLOR];
+    _lrcLabel.numberOfLines = 0;
     [self.contentView addSubview:_lrcLabel];
-    [_lrcLabel sdc_alignEdgesWithSuperview:UIRectEdgeAll];
+    [_lrcLabel sdc_alignEdgesWithSuperview:UIRectEdgeAll
+                                    insets:UIEdgeInsetsMake(0, 10, 0, -10)];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -55,6 +57,7 @@
 - (void)setupLRC:(NSString *)lrc {
     [_lrcLabel setText:lrc];
     [_lrcLabel setTextColor:RGB_TEXT_COLOR];
+    [_lrcLabel sizeToFit];
 }
 
 - (void)setupLRCColor:(UIColor *)color {

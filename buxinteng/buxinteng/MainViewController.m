@@ -13,15 +13,14 @@
 #import "ANYQianQianLyricsDownloader.h"
 #import "ANYAudioSessionHandler.h"
 #import "NetworkMonitor.h"
+#import "PlayListManager.h"
 
 @import MediaPlayer;
 
 @interface MainViewController ()<ANYPlayerDelegate, ANYPlaybackViewDelegate> {
-    NSDictionary *_playingDict;
+    PlayListItem *_playingItem;
 }
 
-@property(nonatomic, strong) NSArray *dataArray;
-@property(nonatomic, strong) NSArray *lrcPathArray;
 @property(nonatomic, strong) UILabel *networkStatusLable;
 @property(nonatomic, strong) ANYPlaybackView *playbackView;
 @property(nonatomic, strong) ANYPlayer *player;
@@ -91,14 +90,9 @@
                                                object:nil];
 }
 
-- (void)loadData {
-    _dataArray = [NSArray arrayWithContentsOfURL:[NSURL URLWithString:@"http://7xl2f9.com1.z0.glb.clouddn.com/play_list.plist"]];
-}
-
 - (void)playNext {
-    int index = arc4random() % self.dataArray.count;
-    _playingDict = [self.dataArray objectAtIndex:index] ;
-    [_player loadPlayerItem:[NSURL URLWithString:[[_playingDict objectForKey:@"tracks"] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]];
+    _playingItem = [[PlayListManager sharedInstance] getRandomItem];
+    [_player loadPlayerItem:_playingItem.tracksUrl];
     [self.playbackView.lrcView resetLRC];
 }
 
@@ -123,13 +117,22 @@
                                        insets:UIEdgeInsetsMake(0.0f, 0.0f, 0.0f, 0.0f)];
     _playbackView = playbackView;
     
+    float h = 30;
+    float f = 15;
+    if (IS_IPHONE_4S || IS_IPHONE_5) {
+        h = 15;
+        f = 12;
+    }
     _networkStatusLable = [Common generateLabelWithText:@"当前网络不可用，请检查你的网络设置"
                                           textAlignment:NSTextAlignmentCenter
-                                                   font:FONT(15)
-                                              textColor:RGB(216, 212, 140)];
+                                                   font:FONT(f)
+                                              textColor:RGB_TEXT_COLOR];
+    _networkStatusLable.backgroundColor = RGB(216, 212, 140);
     [self.view addSubview:_networkStatusLable];
     [_networkStatusLable sdc_alignEdgesWithSuperview:UIRectEdgeTop | UIRectEdgeLeft | UIRectEdgeRight
-                                              insets:UIEdgeInsetsMake(20, 20, 0, -20)];
+                                              insets:UIEdgeInsetsMake(20, 0, 0, 0)];
+    
+    [_networkStatusLable sdc_pinHeight:h];
     _networkStatusLable.alpha = 0.0f;
     
 }
@@ -166,12 +169,8 @@
                           MPMediaItemPropertyPlaybackDuration:[metaData objectForKey:kDuration]};
     [[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:dic];
     
-//    NSString *lrc = [ANYQianQianLyricsDownloader downLoadLyricsByArtist:artist
-//                                                               AndTitle:title];
-    
-     NSString *lrc = [[NSString alloc] initWithContentsOfURL:[NSURL URLWithString:[[_playingDict objectForKey:@"lrc"] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]] encoding:NSUTF8StringEncoding error:nil];
-    
-    [self.playbackView.lrcView reloadLRC:lrc];
+    [self.playbackView.lrcView reloadLRC:[[PlayListManager sharedInstance] getLrcText:_playingItem]];
+    self.playbackView.likeBtn.selected = _playingItem.isLiked;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -219,8 +218,8 @@
                          }];
         BOOL flag = [[notification object] boolValue];
         [self.playbackView enable:YES];
-        if (!self.dataArray || flag) {
-            [self loadData];
+        if ([[PlayListManager sharedInstance] isPlayListEmpty] || flag) {
+            [[PlayListManager sharedInstance] loadData];
             [self playNext];
         } else {
             if (![self.player isPlaying]) {
@@ -283,6 +282,32 @@
     }
     
     [self playNext];
+}
+
+- (void)playbackViewPressHateBtn:(ANYPlaybackView *)playbackView {
+    if (_playingItem) {
+        if ([self.player isPlaying]) {
+            [self.player pause];
+            playbackView.playBtn.selected = NO;
+        }
+        [[PlayListManager sharedInstance] hate:_playingItem];
+        _playingItem = nil;
+        if (![[PlayListManager sharedInstance] isPlayListEmpty]) {
+            [self playNext];
+        } else {
+            
+        }
+    }
+}
+
+- (void)playbackViewPressLikeBtn:(ANYPlaybackView *)playbackView likeFlag:(BOOL)isLike {
+    if (_playingItem) {
+        if (isLike) {
+            [[PlayListManager sharedInstance] like:_playingItem];
+        } else {
+            [[PlayListManager sharedInstance] dislike:_playingItem];
+        }
+    }
 }
 
 #pragma mark - remote control received

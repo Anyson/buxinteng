@@ -15,6 +15,8 @@
 
 - (void)playbackViewPressPlayBtn:(ANYPlaybackView *)playbackView;
 - (void)playbackViewPressNextBtn:(ANYPlaybackView *)playbackView;
+- (void)playbackViewPressHateBtn:(ANYPlaybackView *)playbackView;
+- (void)playbackViewPressLikeBtn:(ANYPlaybackView *)playbackView likeFlag:(BOOL)isLike;
 
 @end
 
@@ -28,6 +30,8 @@
 @property(nonatomic, strong) UILabel            *artistLabel;
 @property(nonatomic, strong) UIButton           *playBtn;
 @property(nonatomic, strong) UIButton           *nextBtn;
+@property(nonatomic, strong) UIButton           *likeBtn;
+@property(nonatomic, strong) UIButton           *hateBtn;
 
 @property(nonatomic, strong) ANYMusicLRCView    *lrcView;
 

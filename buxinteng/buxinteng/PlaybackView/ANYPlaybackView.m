@@ -63,7 +63,7 @@
     
     _progressView.center = _artworkView.center;
     
-    _titleLabel = [Common generateLabelWithText:@""
+    _titleLabel = [Common generateLabelWithText:@" "
                                   textAlignment:NSTextAlignmentCenter
                                            font:FONT(25)
                                       textColor:RGBA(0, 0, 0, 0.8)];
@@ -71,7 +71,7 @@
     [_titleLabel sdc_alignEdgesWithSuperview:UIRectEdgeTop | UIRectEdgeLeft | UIRectEdgeRight
                                         insets:UIEdgeInsetsMake(320 + offsetY + offsetY2, 0, 0, 0)];
     
-    _artistLabel = [Common generateLabelWithText:@""
+    _artistLabel = [Common generateLabelWithText:@" "
                                    textAlignment:NSTextAlignmentCenter
                                             font:FONT(20)
                                        textColor:RGB_TEXT_COLOR];
@@ -85,10 +85,12 @@
     _playBtn.translatesAutoresizingMaskIntoConstraints = YES;
     [_playBtn setImage:IMAGE(@"btn_play")
               forState:UIControlStateNormal];
-     [_playBtn setImage:IMAGE(@"btn_play")
+    [_playBtn setImage:IMAGE(@"btn_play")
                forState:UIControlStateHighlighted];
     [_playBtn setImage:IMAGE(@"btn_transparent")
               forState:UIControlStateSelected];
+    [_playBtn setImage:IMAGE(@"btn_transparent")
+              forState:UIControlStateDisabled];
     [_playBtn setImageEdgeInsets:UIEdgeInsetsMake(0, 15, 0, 0)];
     [_playBtn setBounds:CGRectMake(0, 0, 150, 150)];
     [_playBtn setCenter:_artworkView.center];
@@ -106,25 +108,25 @@
                                    insets:UIEdgeInsetsMake(0, 0, -60 - offsetY, 0)];
     [_nextBtn sdc_horizontallyCenterInSuperviewWithOffset:SCREEN_WIDTH / 4];
     
-    UIButton *heartBtn = [Common generateButtonWithTarget:self
-                                                   action:@selector(heartBtnAction:)];
-    [heartBtn setImage:IMAGE(@"btn_heart")
+    _likeBtn = [Common generateButtonWithTarget:self
+                                         action:@selector(likeBtnAction:)];
+    [_likeBtn setImage:IMAGE(@"btn_heart")
               forState:UIControlStateNormal];
-    [heartBtn setImage:IMAGE(@"btn_heart_red")
+    [_likeBtn setImage:IMAGE(@"btn_heart_red")
               forState:UIControlStateSelected];
-    [self addSubview:heartBtn];
-    [heartBtn sdc_alignEdgesWithSuperview:UIRectEdgeBottom
+    [self addSubview:_likeBtn];
+    [_likeBtn sdc_alignEdgesWithSuperview:UIRectEdgeBottom
                                    insets:UIEdgeInsetsMake(0, 0, -60 - offsetY, 0)];
-    [heartBtn sdc_horizontallyCenterInSuperviewWithOffset:-SCREEN_WIDTH / 4];
+    [_likeBtn sdc_horizontallyCenterInSuperviewWithOffset:-SCREEN_WIDTH / 4];
     
-    UIButton *deleteBtn = [Common generateButtonWithTarget:self
-                                                    action:@selector(deleteBtnAction:)];
-    [deleteBtn setImage:IMAGE(@"btn_delete")
+    _hateBtn = [Common generateButtonWithTarget:self
+                                         action:@selector(hateBtnAction:)];
+    [_hateBtn setImage:IMAGE(@"btn_delete")
               forState:UIControlStateNormal];
-    [self addSubview:deleteBtn];
-    [deleteBtn sdc_alignEdgesWithSuperview:UIRectEdgeBottom
+    [self addSubview:_hateBtn];
+    [_hateBtn sdc_alignEdgesWithSuperview:UIRectEdgeBottom
                                    insets:UIEdgeInsetsMake(0, 0, -60 - offsetY, 0)];
-    [deleteBtn sdc_horizontallyCenterInSuperview];
+    [_hateBtn sdc_horizontallyCenterInSuperview];
     
     _lrcView = [[ANYMusicLRCView alloc] init];
     _lrcView.translatesAutoresizingMaskIntoConstraints = NO;
@@ -136,7 +138,7 @@
                      ofView:_artistLabel];
     [_lrcView sdc_alignEdge:UIRectEdgeBottom
                    withEdge:UIRectEdgeTop
-                     ofView:deleteBtn];
+                     ofView:_hateBtn];
 
 }
 
@@ -199,21 +201,25 @@
         _titleLabel.alpha = 1.0f;
         _artistLabel.alpha = 1.0f;
         _lrcView.alpha = 1.0f;
+        [_lrcView pauseLrc];
     }
 }
 
-- (void)heartBtnAction:(UIButton *)sender {
+- (void)likeBtnAction:(UIButton *)sender {
     sender.selected = !sender.selected;
+    if ([self.delegate respondsToSelector:@selector(playbackViewPressLikeBtn:likeFlag:)]) {
+        [self.delegate playbackViewPressLikeBtn:self likeFlag:sender.selected];
+    }
 }
 
-- (void)deleteBtnAction:(id)sender {
-    if ([self.delegate respondsToSelector:@selector(playbackViewPressNextBtn:)]) {
-        [self.delegate playbackViewPressNextBtn:self];
-        
-        _artworkView.alpha = 1.0f;
-        _titleLabel.alpha = 1.0f;
-        _artistLabel.alpha = 1.0f;
-        _lrcView.alpha = 1.0f;
+- (void)hateBtnAction:(id)sender {
+    _artworkView.alpha = 1.0f;
+    _titleLabel.alpha = 1.0f;
+    _artistLabel.alpha = 1.0f;
+    _lrcView.alpha = 1.0f;
+    [_lrcView pauseLrc];
+    if ([self.delegate respondsToSelector:@selector(playbackViewPressHateBtn:)]) {
+        [self.delegate playbackViewPressHateBtn:self];
     }
 }
 

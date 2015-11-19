@@ -107,7 +107,15 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 30.0f;
+    NSString *lrcText = [[self.self.musicLrc.lrcList objectAtIndex:indexPath.row] lrcStr];
+    CGRect rect = [lrcText boundingRectWithSize:CGSizeMake(SCREEN_WIDTH - 20, SCREEN_HEIGHT)
+                                        options:NSStringDrawingUsesLineFragmentOrigin
+                                     attributes:@{NSFontAttributeName : FONT(17)}
+                                        context:nil];
+    if (rect.size.height > 25) {
+        return 50;
+    }
+    return 30;
 }
 
 

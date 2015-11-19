@@ -26,6 +26,7 @@
 		163C9B781BFE0F56000F1D01 /* ANYAudioSessionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 163C9B771BFE0F56000F1D01 /* ANYAudioSessionHandler.m */; };
 		163C9B7C1BFE2A34000F1D01 /* NetworkMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 163C9B7B1BFE2A34000F1D01 /* NetworkMonitor.m */; };
 		163C9B7F1BFE2E28000F1D01 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 163C9B7E1BFE2E28000F1D01 /* Reachability.m */; };
+		163C9B821BFE40D4000F1D01 /* PlayListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 163C9B811BFE40D4000F1D01 /* PlayListItem.m */; };
 		1653A3AC1BFCDFD000126B33 /* ANYMusicLRC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1653A3AB1BFCDFD000126B33 /* ANYMusicLRC.m */; };
 		1653A3AF1BFCE04400126B33 /* ANYMusicLRCView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1653A3AE1BFCE04400126B33 /* ANYMusicLRCView.m */; };
 		1653A3C21BFD4BAD00126B33 /* ANYLRCTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1653A3C11BFD4BAD00126B33 /* ANYLRCTableViewCell.m */; };
@@ -88,6 +89,8 @@
 		163C9B7B1BFE2A34000F1D01 /* NetworkMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkMonitor.m; sourceTree = "<group>"; };
 		163C9B7D1BFE2E28000F1D01 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		163C9B7E1BFE2E28000F1D01 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		163C9B801BFE40D4000F1D01 /* PlayListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayListItem.h; sourceTree = "<group>"; };
+		163C9B811BFE40D4000F1D01 /* PlayListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayListItem.m; sourceTree = "<group>"; };
 		1653A3AA1BFCDFD000126B33 /* ANYMusicLRC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANYMusicLRC.h; sourceTree = "<group>"; };
 		1653A3AB1BFCDFD000126B33 /* ANYMusicLRC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANYMusicLRC.m; sourceTree = "<group>"; };
 		1653A3AD1BFCE04400126B33 /* ANYMusicLRCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANYMusicLRCView.h; sourceTree = "<group>"; };
@@ -252,6 +255,8 @@
 			children = (
 				163C9B731BFDA6C7000F1D01 /* PlayListManager.h */,
 				163C9B741BFDA6C7000F1D01 /* PlayListManager.m */,
+				163C9B801BFE40D4000F1D01 /* PlayListItem.h */,
+				163C9B811BFE40D4000F1D01 /* PlayListItem.m */,
 			);
 			path = PlayListManager;
 			sourceTree = "<group>";
@@ -492,6 +497,7 @@
 				160F76261BFB5F36002B34F4 /* CircleProgressView.m in Sources */,
 				163C9B751BFDA6C7000F1D01 /* PlayListManager.m in Sources */,
 				1653A3AC1BFCDFD000126B33 /* ANYMusicLRC.m in Sources */,
+				163C9B821BFE40D4000F1D01 /* PlayListItem.m in Sources */,
 				1653A3AF1BFCE04400126B33 /* ANYMusicLRCView.m in Sources */,
 				163C9B7C1BFE2A34000F1D01 /* NetworkMonitor.m in Sources */,
 				163C9B6F1BFD8A6E000F1D01 /* ANYQianQianLyricsDownloader.m in Sources */,
