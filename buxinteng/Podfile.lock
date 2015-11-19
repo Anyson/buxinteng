@@ -1,0 +1,13 @@
+PODS:
+  - FDFullscreenPopGesture (1.1)
+  - SDCAutoLayout (2.0.3)
+
+DEPENDENCIES:
+  - FDFullscreenPopGesture (= 1.1)
+  - SDCAutoLayout (~> 2.0.3)
+
+SPEC CHECKSUMS:
+  FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
+  SDCAutoLayout: e6885bb39ab8e2ec2ff84d158f38035f025f7420
+
+COCOAPODS: 0.39.0

@@ -1,0 +1,964 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02735E790AF178221D0CFBA78CACA905 /* Pods-buxintengTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A8D76E429073D99BC36ED6B33BD64D /* Pods-buxintengTests-dummy.m */; };
+		4B51B9AB1F82CF082A539D53316C2801 /* Pods-buxinteng-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB7C25409384D7DC1A545B5D4B1F656 /* Pods-buxinteng-dummy.m */; };
+		51BB560DB48D81C168E6ED4F066E4956 /* FDFullscreenPopGesture-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 55044CFEE9AA2D8963D650C49243C4F4 /* FDFullscreenPopGesture-dummy.m */; };
+		535F77B0C617BA9B51DF99270D9B127D /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 59798F18D3E529D7F3A866B60A435D65 /* Pods-dummy.m */; };
+		552C65D1B247B4877EF4C0ED4A9B1F72 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		5DA382A8C741E1651E444BA7F5406C6A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		63C1A9613AB7EA6E3C53803500F60693 /* SDCAutoLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7A3E86155C083FECE5ED6BA635DC57 /* SDCAutoLayout-dummy.m */; };
+		6DD4630F20138856A2D25EB21CEC309F /* Pods-buxintengUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 96BDE318CFD0DF9C340ADD22D6D0CD70 /* Pods-buxintengUITests-dummy.m */; };
+		7EB0DD10FF07F928FF4C1F457259DB3A /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC9EC860F95156E9165C64BD8086187 /* UINavigationController+FDFullscreenPopGesture.m */; };
+		9EEF4D50F6317F0062CE5E2950497AD5 /* UINavigationController+FDFullscreenPopGesture.h in Headers */ = {isa = PBXBuildFile; fileRef = 1208AD21FADC22B83D83F283167FE41C /* UINavigationController+FDFullscreenPopGesture.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A306FA21625E059B6CCB63258C79A170 /* UIView+SDCAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 997FCBF0ECE2B6F7460A803D57F57CCA /* UIView+SDCAutoLayout.m */; };
+		B3C7B0986E4B9AD28F0EE70415D32C4E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		CE7847E91DD86F2F2EB3F0E05E6AB5FD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		D4288E631D12CDF444F0AA1D34A4C5B0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		E26A0EC089E64473FDD9FD0FEEB800AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		F0DD92BFEB9AF41F18F260B78D59F941 /* UIView+SDCAutoLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 0055BB278E08EC2155361195B62075CB /* UIView+SDCAutoLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1814E8E088FA7BAC42BC2138FE3562D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE45550874C6BA40262FCBAE3780CA3E;
+			remoteInfo = SDCAutoLayout;
+		};
+		22B8CE858F1D3666FF1EFB86908966AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE45550874C6BA40262FCBAE3780CA3E;
+			remoteInfo = SDCAutoLayout;
+		};
+		4D6371B295EB25C79BBD10B26B4C2DEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE45550874C6BA40262FCBAE3780CA3E;
+			remoteInfo = SDCAutoLayout;
+		};
+		A8D862801B5C2310138996565CFA95A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE45550874C6BA40262FCBAE3780CA3E;
+			remoteInfo = SDCAutoLayout;
+		};
+		D13B0110BBD027BC0047E7ED5644C406 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C71DE0FB8A6E5BB6EAF9FB037D799CC;
+			remoteInfo = FDFullscreenPopGesture;
+		};
+		D52BBE4B291A651F7202D192E1F22334 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C71DE0FB8A6E5BB6EAF9FB037D799CC;
+			remoteInfo = FDFullscreenPopGesture;
+		};
+		E7EBF5EBA3538FFE73FC5B109DF39724 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C71DE0FB8A6E5BB6EAF9FB037D799CC;
+			remoteInfo = FDFullscreenPopGesture;
+		};
+		E8A9DFEE6AE43F203413DB9CE7F3BEE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C71DE0FB8A6E5BB6EAF9FB037D799CC;
+			remoteInfo = FDFullscreenPopGesture;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0055BB278E08EC2155361195B62075CB /* UIView+SDCAutoLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+SDCAutoLayout.h"; path = "AutoLayout/UIView+SDCAutoLayout.h"; sourceTree = "<group>"; };
+		092BBBC999B323BA7B827BA96BC4E802 /* Pods-buxinteng-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-buxinteng-resources.sh"; sourceTree = "<group>"; };
+		0DB25748B8EB03837AA613FD78BD5E95 /* Pods-buxintengUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-buxintengUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		0ED78FAD25575C9EF4914C39CE49275E /* Pods-buxintengUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-buxintengUITests-resources.sh"; sourceTree = "<group>"; };
+		1208AD21FADC22B83D83F283167FE41C /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+FDFullscreenPopGesture.h"; path = "FDFullscreenPopGesture/UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
+		1FA0307D347FFFF71687F8BA35A154CA /* Pods-buxintengTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-buxintengTests-frameworks.sh"; sourceTree = "<group>"; };
+		2D9379BBB964942982E3BFB543969398 /* FDFullscreenPopGesture-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FDFullscreenPopGesture-prefix.pch"; sourceTree = "<group>"; };
+		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3E58219093B68A2E0BFAD3E058D86A29 /* Pods-buxinteng-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-buxinteng-acknowledgements.plist"; sourceTree = "<group>"; };
+		3E6F97A92F1882C210CA2E2789A77F87 /* libSDCAutoLayout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSDCAutoLayout.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4912F72643BD5F46A6A37AD08A3B0C22 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		55044CFEE9AA2D8963D650C49243C4F4 /* FDFullscreenPopGesture-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FDFullscreenPopGesture-dummy.m"; sourceTree = "<group>"; };
+		59798F18D3E529D7F3A866B60A435D65 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		5BC8D2E461860EF9B1FB5E7BB6BC40FA /* libFDFullscreenPopGesture.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFDFullscreenPopGesture.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		68A8D76E429073D99BC36ED6B33BD64D /* Pods-buxintengTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-buxintengTests-dummy.m"; sourceTree = "<group>"; };
+		68AD6D66A54042792B74512006BD65B2 /* FDFullscreenPopGesture.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FDFullscreenPopGesture.xcconfig; sourceTree = "<group>"; };
+		6A6BFC27656DFEBB6D944DA56FB7F3DA /* SDCAutoLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDCAutoLayout-prefix.pch"; sourceTree = "<group>"; };
+		6C2C55CAD92E918B04BFDEB2E098B8F0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		6C679A794559AEEAB13DDF8BBDD0F6ED /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6CB7C25409384D7DC1A545B5D4B1F656 /* Pods-buxinteng-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-buxinteng-dummy.m"; sourceTree = "<group>"; };
+		77387BF55173D30D2B99256D374B7265 /* SDCAutoLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SDCAutoLayout.xcconfig; sourceTree = "<group>"; };
+		792862EBD101431AF1564A020364723E /* Pods-buxintengTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-buxintengTests-resources.sh"; sourceTree = "<group>"; };
+		87E4959CC63D527296BCA68795C960E6 /* Pods-buxinteng.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-buxinteng.release.xcconfig"; sourceTree = "<group>"; };
+		889FF4D4692624215AD058387E70445A /* Pods-buxinteng-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-buxinteng-frameworks.sh"; sourceTree = "<group>"; };
+		8C5F12306894E36915A0F4B11F4345AF /* libPods-buxintengUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-buxintengUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9217B1E4BD6AE5ACD192FC8BFAC2B115 /* Pods-buxintengTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-buxintengTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		96BDE318CFD0DF9C340ADD22D6D0CD70 /* Pods-buxintengUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-buxintengUITests-dummy.m"; sourceTree = "<group>"; };
+		997FCBF0ECE2B6F7460A803D57F57CCA /* UIView+SDCAutoLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+SDCAutoLayout.m"; path = "AutoLayout/UIView+SDCAutoLayout.m"; sourceTree = "<group>"; };
+		A5E990286CB792922E851B96C5C9E192 /* libPods-buxintengTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-buxintengTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB7A3E86155C083FECE5ED6BA635DC57 /* SDCAutoLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SDCAutoLayout-dummy.m"; sourceTree = "<group>"; };
+		B14E369142B343179D17FD0FF84F9FFF /* Pods-buxintengTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-buxintengTests.release.xcconfig"; sourceTree = "<group>"; };
+		B4647212FBA7682C1E62BFCC5FE02DD0 /* Pods-buxinteng.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-buxinteng.debug.xcconfig"; sourceTree = "<group>"; };
+		B90361C7A2DCD0B4E279690C2A09125D /* Pods-buxintengUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-buxintengUITests-frameworks.sh"; sourceTree = "<group>"; };
+		B95BB5316CD090CA720C5D597C7A844F /* Pods-buxintengTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-buxintengTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C1DBDA3E246350B93711FDE221E28D4B /* Pods-buxinteng-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-buxinteng-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C77685B89B3C18DAE53BFE05CA7DDF48 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		E01413EE695ADCB1F534FD9CF0E9393D /* Pods-buxintengTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-buxintengTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		E4E0E1EF0226AF2D57BEEE0EAD4E0CB0 /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
+		E539A564D02AD8711866D50E87F00B1D /* Pods-buxintengUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-buxintengUITests.release.xcconfig"; sourceTree = "<group>"; };
+		ED948A6739E0C95781CC19C58F4012F9 /* Pods-buxintengUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-buxintengUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		EDA31378AD3957F23978204E013AFBD1 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		EEC9EC860F95156E9165C64BD8086187 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+FDFullscreenPopGesture.m"; path = "FDFullscreenPopGesture/UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
+		F0F6ADE34CB3C6899E86F27A09EC4152 /* libPods-buxinteng.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-buxinteng.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1EC47EA84246A4E14A2D05B1D5D2A26 /* Pods-buxintengUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-buxintengUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		F9A330F3FD9503D558CB6B8E64C2A9F0 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6AF0D258ED9BD216CEA4179CC7D5A118 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3C7B0986E4B9AD28F0EE70415D32C4E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97407A0889F2F6BB177C5ADEC1298907 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				552C65D1B247B4877EF4C0ED4A9B1F72 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA7D7AC5CC3F04366004A4B1FD379A7C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4288E631D12CDF444F0AA1D34A4C5B0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF277CFF3871600623A9BD3DD9917447 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DA382A8C741E1651E444BA7F5406C6A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE92A2E23265162E5911A9A78D124369 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E26A0EC089E64473FDD9FD0FEEB800AE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFFD6488B51E9422D435E1436374D3A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE7847E91DD86F2F2EB3F0E05E6AB5FD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1259515B58F53977210E87773CD6F7AC /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F7A5A9C712DAE9953FED281F93D505E0 /* Pods */,
+				693CB0779419CDCE6A7D8A3A0E6742BD /* Pods-buxinteng */,
+				FA4CC041F26F0ECFFA3C5B8AB4CBBAF1 /* Pods-buxintengTests */,
+				245D2CB3D4AE059122CB920E3F60E260 /* Pods-buxintengUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		16945C0FBAA17C66A15B0E047133BE27 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				77387BF55173D30D2B99256D374B7265 /* SDCAutoLayout.xcconfig */,
+				AB7A3E86155C083FECE5ED6BA635DC57 /* SDCAutoLayout-dummy.m */,
+				6A6BFC27656DFEBB6D944DA56FB7F3DA /* SDCAutoLayout-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SDCAutoLayout";
+			sourceTree = "<group>";
+		};
+		245D2CB3D4AE059122CB920E3F60E260 /* Pods-buxintengUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ED948A6739E0C95781CC19C58F4012F9 /* Pods-buxintengUITests-acknowledgements.markdown */,
+				F1EC47EA84246A4E14A2D05B1D5D2A26 /* Pods-buxintengUITests-acknowledgements.plist */,
+				96BDE318CFD0DF9C340ADD22D6D0CD70 /* Pods-buxintengUITests-dummy.m */,
+				B90361C7A2DCD0B4E279690C2A09125D /* Pods-buxintengUITests-frameworks.sh */,
+				0ED78FAD25575C9EF4914C39CE49275E /* Pods-buxintengUITests-resources.sh */,
+				0DB25748B8EB03837AA613FD78BD5E95 /* Pods-buxintengUITests.debug.xcconfig */,
+				E539A564D02AD8711866D50E87F00B1D /* Pods-buxintengUITests.release.xcconfig */,
+			);
+			name = "Pods-buxintengUITests";
+			path = "Target Support Files/Pods-buxintengUITests";
+			sourceTree = "<group>";
+		};
+		693CB0779419CDCE6A7D8A3A0E6742BD /* Pods-buxinteng */ = {
+			isa = PBXGroup;
+			children = (
+				C1DBDA3E246350B93711FDE221E28D4B /* Pods-buxinteng-acknowledgements.markdown */,
+				3E58219093B68A2E0BFAD3E058D86A29 /* Pods-buxinteng-acknowledgements.plist */,
+				6CB7C25409384D7DC1A545B5D4B1F656 /* Pods-buxinteng-dummy.m */,
+				889FF4D4692624215AD058387E70445A /* Pods-buxinteng-frameworks.sh */,
+				092BBBC999B323BA7B827BA96BC4E802 /* Pods-buxinteng-resources.sh */,
+				B4647212FBA7682C1E62BFCC5FE02DD0 /* Pods-buxinteng.debug.xcconfig */,
+				87E4959CC63D527296BCA68795C960E6 /* Pods-buxinteng.release.xcconfig */,
+			);
+			name = "Pods-buxinteng";
+			path = "Target Support Files/Pods-buxinteng";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				959522DB3E860CD12164F4F087F0B206 /* Pods */,
+				AA3290A4DFBF256AAC76C0A7835A021F /* Products */,
+				1259515B58F53977210E87773CD6F7AC /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		959522DB3E860CD12164F4F087F0B206 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EB480116937ABDBFF52056A1860D3338 /* FDFullscreenPopGesture */,
+				C5948D0B4EE291E579439491F194B7F4 /* SDCAutoLayout */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A4011B6728E752D40008A046134469E0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				68AD6D66A54042792B74512006BD65B2 /* FDFullscreenPopGesture.xcconfig */,
+				55044CFEE9AA2D8963D650C49243C4F4 /* FDFullscreenPopGesture-dummy.m */,
+				2D9379BBB964942982E3BFB543969398 /* FDFullscreenPopGesture-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FDFullscreenPopGesture";
+			sourceTree = "<group>";
+		};
+		AA3290A4DFBF256AAC76C0A7835A021F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5BC8D2E461860EF9B1FB5E7BB6BC40FA /* libFDFullscreenPopGesture.a */,
+				4912F72643BD5F46A6A37AD08A3B0C22 /* libPods.a */,
+				F0F6ADE34CB3C6899E86F27A09EC4152 /* libPods-buxinteng.a */,
+				A5E990286CB792922E851B96C5C9E192 /* libPods-buxintengTests.a */,
+				8C5F12306894E36915A0F4B11F4345AF /* libPods-buxintengUITests.a */,
+				3E6F97A92F1882C210CA2E2789A77F87 /* libSDCAutoLayout.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		C5948D0B4EE291E579439491F194B7F4 /* SDCAutoLayout */ = {
+			isa = PBXGroup;
+			children = (
+				0055BB278E08EC2155361195B62075CB /* UIView+SDCAutoLayout.h */,
+				997FCBF0ECE2B6F7460A803D57F57CCA /* UIView+SDCAutoLayout.m */,
+				16945C0FBAA17C66A15B0E047133BE27 /* Support Files */,
+			);
+			path = SDCAutoLayout;
+			sourceTree = "<group>";
+		};
+		EB480116937ABDBFF52056A1860D3338 /* FDFullscreenPopGesture */ = {
+			isa = PBXGroup;
+			children = (
+				1208AD21FADC22B83D83F283167FE41C /* UINavigationController+FDFullscreenPopGesture.h */,
+				EEC9EC860F95156E9165C64BD8086187 /* UINavigationController+FDFullscreenPopGesture.m */,
+				A4011B6728E752D40008A046134469E0 /* Support Files */,
+			);
+			path = FDFullscreenPopGesture;
+			sourceTree = "<group>";
+		};
+		F7A5A9C712DAE9953FED281F93D505E0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6C679A794559AEEAB13DDF8BBDD0F6ED /* Pods-acknowledgements.markdown */,
+				EDA31378AD3957F23978204E013AFBD1 /* Pods-acknowledgements.plist */,
+				59798F18D3E529D7F3A866B60A435D65 /* Pods-dummy.m */,
+				E4E0E1EF0226AF2D57BEEE0EAD4E0CB0 /* Pods-frameworks.sh */,
+				F9A330F3FD9503D558CB6B8E64C2A9F0 /* Pods-resources.sh */,
+				6C2C55CAD92E918B04BFDEB2E098B8F0 /* Pods.debug.xcconfig */,
+				C77685B89B3C18DAE53BFE05CA7DDF48 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			path = "Target Support Files/Pods";
+			sourceTree = "<group>";
+		};
+		FA4CC041F26F0ECFFA3C5B8AB4CBBAF1 /* Pods-buxintengTests */ = {
+			isa = PBXGroup;
+			children = (
+				9217B1E4BD6AE5ACD192FC8BFAC2B115 /* Pods-buxintengTests-acknowledgements.markdown */,
+				E01413EE695ADCB1F534FD9CF0E9393D /* Pods-buxintengTests-acknowledgements.plist */,
+				68A8D76E429073D99BC36ED6B33BD64D /* Pods-buxintengTests-dummy.m */,
+				1FA0307D347FFFF71687F8BA35A154CA /* Pods-buxintengTests-frameworks.sh */,
+				792862EBD101431AF1564A020364723E /* Pods-buxintengTests-resources.sh */,
+				B95BB5316CD090CA720C5D597C7A844F /* Pods-buxintengTests.debug.xcconfig */,
+				B14E369142B343179D17FD0FF84F9FFF /* Pods-buxintengTests.release.xcconfig */,
+			);
+			name = "Pods-buxintengTests";
+			path = "Target Support Files/Pods-buxintengTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		11660A4AA06371948BA52E228E12D47F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EEF4D50F6317F0062CE5E2950497AD5 /* UINavigationController+FDFullscreenPopGesture.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85AABBFB5F6F9EFDBC5359E8525C993E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0DD92BFEB9AF41F18F260B78D59F941 /* UIView+SDCAutoLayout.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		203C67B97DA1BD7620BA3B34C14F1010 /* Pods-buxinteng */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7D75EBD8C8EDE68100EF95289566D58 /* Build configuration list for PBXNativeTarget "Pods-buxinteng" */;
+			buildPhases = (
+				405389816E47EB16B36E3364B537CE88 /* Sources */,
+				BA7D7AC5CC3F04366004A4B1FD379A7C /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				19F9735736617BB1E1831BE2E395CCEE /* PBXTargetDependency */,
+				14806AADDDA863933805C0869B085228 /* PBXTargetDependency */,
+			);
+			name = "Pods-buxinteng";
+			productName = "Pods-buxinteng";
+			productReference = F0F6ADE34CB3C6899E86F27A09EC4152 /* libPods-buxinteng.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		2C71DE0FB8A6E5BB6EAF9FB037D799CC /* FDFullscreenPopGesture */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEB8E05E380A5AFADB7A5465E8055C85 /* Build configuration list for PBXNativeTarget "FDFullscreenPopGesture" */;
+			buildPhases = (
+				0FA965BFF347F0200F43561762BB0754 /* Sources */,
+				BF277CFF3871600623A9BD3DD9917447 /* Frameworks */,
+				11660A4AA06371948BA52E228E12D47F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FDFullscreenPopGesture;
+			productName = FDFullscreenPopGesture;
+			productReference = 5BC8D2E461860EF9B1FB5E7BB6BC40FA /* libFDFullscreenPopGesture.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		336542F86AAF731105D61663ED887824 /* Pods-buxintengTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2064C2A365E9B55A278D04B53E6A5F5 /* Build configuration list for PBXNativeTarget "Pods-buxintengTests" */;
+			buildPhases = (
+				90FD9A0E5C5DF081AA0DFBB7ABE3A51D /* Sources */,
+				6AF0D258ED9BD216CEA4179CC7D5A118 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F2BD70FCFB2492F8353125741B2D71A2 /* PBXTargetDependency */,
+				A24483D251AB7089510C8F2E890DB0C6 /* PBXTargetDependency */,
+			);
+			name = "Pods-buxintengTests";
+			productName = "Pods-buxintengTests";
+			productReference = A5E990286CB792922E851B96C5C9E192 /* libPods-buxintengTests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		AE45550874C6BA40262FCBAE3780CA3E /* SDCAutoLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04826BD4A26B5567DC36468A611764B3 /* Build configuration list for PBXNativeTarget "SDCAutoLayout" */;
+			buildPhases = (
+				49D1F5F723D28A980604A21078A5464D /* Sources */,
+				97407A0889F2F6BB177C5ADEC1298907 /* Frameworks */,
+				85AABBFB5F6F9EFDBC5359E8525C993E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SDCAutoLayout;
+			productName = SDCAutoLayout;
+			productReference = 3E6F97A92F1882C210CA2E2789A77F87 /* libSDCAutoLayout.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F5289E4BD67273D665EDEE611D48B831 /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 140952635C1680B2CD1762328470AAEC /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				0ED4B1F1CBEC8D3BD1F46CC7410EBC9C /* Sources */,
+				CE92A2E23265162E5911A9A78D124369 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				551896E7B33B67CB3912DB8339793089 /* PBXTargetDependency */,
+				470F55A2A4FF4464BA41C9FC533A3CEB /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = 4912F72643BD5F46A6A37AD08A3B0C22 /* libPods.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		FA777625A7E9EDED2B7CC488746C62A0 /* Pods-buxintengUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 326DDE9251AC41730C4AFDE879DD7EAD /* Build configuration list for PBXNativeTarget "Pods-buxintengUITests" */;
+			buildPhases = (
+				EED22EF360BC1891BCF183F0D04B87D1 /* Sources */,
+				FFFD6488B51E9422D435E1436374D3A9 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				86265E93645B08D1454EAFF840AF92BF /* PBXTargetDependency */,
+				84F553129A421E16033FB8603515FF25 /* PBXTargetDependency */,
+			);
+			name = "Pods-buxintengUITests";
+			productName = "Pods-buxintengUITests";
+			productReference = 8C5F12306894E36915A0F4B11F4345AF /* libPods-buxintengUITests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = AA3290A4DFBF256AAC76C0A7835A021F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2C71DE0FB8A6E5BB6EAF9FB037D799CC /* FDFullscreenPopGesture */,
+				F5289E4BD67273D665EDEE611D48B831 /* Pods */,
+				203C67B97DA1BD7620BA3B34C14F1010 /* Pods-buxinteng */,
+				336542F86AAF731105D61663ED887824 /* Pods-buxintengTests */,
+				FA777625A7E9EDED2B7CC488746C62A0 /* Pods-buxintengUITests */,
+				AE45550874C6BA40262FCBAE3780CA3E /* SDCAutoLayout */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0ED4B1F1CBEC8D3BD1F46CC7410EBC9C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				535F77B0C617BA9B51DF99270D9B127D /* Pods-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0FA965BFF347F0200F43561762BB0754 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51BB560DB48D81C168E6ED4F066E4956 /* FDFullscreenPopGesture-dummy.m in Sources */,
+				7EB0DD10FF07F928FF4C1F457259DB3A /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		405389816E47EB16B36E3364B537CE88 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B51B9AB1F82CF082A539D53316C2801 /* Pods-buxinteng-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49D1F5F723D28A980604A21078A5464D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63C1A9613AB7EA6E3C53803500F60693 /* SDCAutoLayout-dummy.m in Sources */,
+				A306FA21625E059B6CCB63258C79A170 /* UIView+SDCAutoLayout.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90FD9A0E5C5DF081AA0DFBB7ABE3A51D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02735E790AF178221D0CFBA78CACA905 /* Pods-buxintengTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EED22EF360BC1891BCF183F0D04B87D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DD4630F20138856A2D25EB21CEC309F /* Pods-buxintengUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		14806AADDDA863933805C0869B085228 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SDCAutoLayout;
+			target = AE45550874C6BA40262FCBAE3780CA3E /* SDCAutoLayout */;
+			targetProxy = 1814E8E088FA7BAC42BC2138FE3562D4 /* PBXContainerItemProxy */;
+		};
+		19F9735736617BB1E1831BE2E395CCEE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FDFullscreenPopGesture;
+			target = 2C71DE0FB8A6E5BB6EAF9FB037D799CC /* FDFullscreenPopGesture */;
+			targetProxy = E8A9DFEE6AE43F203413DB9CE7F3BEE9 /* PBXContainerItemProxy */;
+		};
+		470F55A2A4FF4464BA41C9FC533A3CEB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SDCAutoLayout;
+			target = AE45550874C6BA40262FCBAE3780CA3E /* SDCAutoLayout */;
+			targetProxy = A8D862801B5C2310138996565CFA95A4 /* PBXContainerItemProxy */;
+		};
+		551896E7B33B67CB3912DB8339793089 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FDFullscreenPopGesture;
+			target = 2C71DE0FB8A6E5BB6EAF9FB037D799CC /* FDFullscreenPopGesture */;
+			targetProxy = D52BBE4B291A651F7202D192E1F22334 /* PBXContainerItemProxy */;
+		};
+		84F553129A421E16033FB8603515FF25 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SDCAutoLayout;
+			target = AE45550874C6BA40262FCBAE3780CA3E /* SDCAutoLayout */;
+			targetProxy = 22B8CE858F1D3666FF1EFB86908966AD /* PBXContainerItemProxy */;
+		};
+		86265E93645B08D1454EAFF840AF92BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FDFullscreenPopGesture;
+			target = 2C71DE0FB8A6E5BB6EAF9FB037D799CC /* FDFullscreenPopGesture */;
+			targetProxy = E7EBF5EBA3538FFE73FC5B109DF39724 /* PBXContainerItemProxy */;
+		};
+		A24483D251AB7089510C8F2E890DB0C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SDCAutoLayout;
+			target = AE45550874C6BA40262FCBAE3780CA3E /* SDCAutoLayout */;
+			targetProxy = 4D6371B295EB25C79BBD10B26B4C2DEB /* PBXContainerItemProxy */;
+		};
+		F2BD70FCFB2492F8353125741B2D71A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FDFullscreenPopGesture;
+			target = 2C71DE0FB8A6E5BB6EAF9FB037D799CC /* FDFullscreenPopGesture */;
+			targetProxy = D13B0110BBD027BC0047E7ED5644C406 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		13B270E646E98E7D38FF387E17F32611 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DB25748B8EB03837AA613FD78BD5E95 /* Pods-buxintengUITests.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		33D33C03D67805F9CCDA2EE539091EB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B95BB5316CD090CA720C5D597C7A844F /* Pods-buxintengTests.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		35DE43DDB55832A5F2561F8D3A30C168 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77387BF55173D30D2B99256D374B7265 /* SDCAutoLayout.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SDCAutoLayout/SDCAutoLayout-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		3AF946F67DD02C1F7D765B6914A7606E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C2C55CAD92E918B04BFDEB2E098B8F0 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		485E1604CBFF2A5E5AF729172F6A5F20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4647212FBA7682C1E62BFCC5FE02DD0 /* Pods-buxinteng.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		5AC4DA7A831614D71D9B31E1294288A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B14E369142B343179D17FD0FF84F9FFF /* Pods-buxintengTests.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		6F8D2212384942A7BA5EFB1DB05CC928 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87E4959CC63D527296BCA68795C960E6 /* Pods-buxinteng.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		725D2568501CF800A51188C7C062C49A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68AD6D66A54042792B74512006BD65B2 /* FDFullscreenPopGesture.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FDFullscreenPopGesture/FDFullscreenPopGesture-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		7D3E51D2F4A4F3F1A0275E694ED38B40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77387BF55173D30D2B99256D374B7265 /* SDCAutoLayout.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SDCAutoLayout/SDCAutoLayout-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		CC47253B5A5D38731267742BBA46000C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C77685B89B3C18DAE53BFE05CA7DDF48 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		F5ADB3A3E98E521566719F715596EC5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E539A564D02AD8711866D50E87F00B1D /* Pods-buxintengUITests.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		FAFAEF3992DAD3196C6AB5C7C1111C38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68AD6D66A54042792B74512006BD65B2 /* FDFullscreenPopGesture.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FDFullscreenPopGesture/FDFullscreenPopGesture-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		FB45FFD90572718D82AB9092B750F0CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04826BD4A26B5567DC36468A611764B3 /* Build configuration list for PBXNativeTarget "SDCAutoLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35DE43DDB55832A5F2561F8D3A30C168 /* Debug */,
+				7D3E51D2F4A4F3F1A0275E694ED38B40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		140952635C1680B2CD1762328470AAEC /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AF946F67DD02C1F7D765B6914A7606E /* Debug */,
+				CC47253B5A5D38731267742BBA46000C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */,
+				FB45FFD90572718D82AB9092B750F0CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		326DDE9251AC41730C4AFDE879DD7EAD /* Build configuration list for PBXNativeTarget "Pods-buxintengUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13B270E646E98E7D38FF387E17F32611 /* Debug */,
+				F5ADB3A3E98E521566719F715596EC5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2064C2A365E9B55A278D04B53E6A5F5 /* Build configuration list for PBXNativeTarget "Pods-buxintengTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33D33C03D67805F9CCDA2EE539091EB4 /* Debug */,
+				5AC4DA7A831614D71D9B31E1294288A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7D75EBD8C8EDE68100EF95289566D58 /* Build configuration list for PBXNativeTarget "Pods-buxinteng" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				485E1604CBFF2A5E5AF729172F6A5F20 /* Debug */,
+				6F8D2212384942A7BA5EFB1DB05CC928 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DEB8E05E380A5AFADB7A5465E8055C85 /* Build configuration list for PBXNativeTarget "FDFullscreenPopGesture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAFAEF3992DAD3196C6AB5C7C1111C38 /* Debug */,
+				725D2568501CF800A51188C7C062C49A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

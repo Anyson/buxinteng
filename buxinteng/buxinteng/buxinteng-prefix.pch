@@ -1,0 +1,22 @@
+//
+//  buxinteng-prefix.pch
+//  buxinteng
+//
+//  Created by Anyson Chan on 15/11/15.
+//  Copyright © 2015年 Anyson Chan. All rights reserved.
+//
+
+#ifndef buxinteng_prefix_pch
+#define buxinteng_prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "MacroDefinition.h"
+#import "Common.h"
+
+#endif
+
+#endif /* buxinteng_prefix_pch */
