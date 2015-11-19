@@ -12,6 +12,7 @@
 #import <UIView+SDCAutoLayout.h>
 #import "ANYQianQianLyricsDownloader.h"
 #import "ANYAudioSessionHandler.h"
+#import "NetworkMonitor.h"
 
 @import MediaPlayer;
 
@@ -21,6 +22,7 @@
 
 @property(nonatomic, strong) NSArray *dataArray;
 @property(nonatomic, strong) NSArray *lrcPathArray;
+@property(nonatomic, strong) UILabel *networkStatusLable;
 @property(nonatomic, strong) ANYPlaybackView *playbackView;
 @property(nonatomic, strong) ANYPlayer *player;
 
@@ -35,6 +37,14 @@
     
     [[NSNotificationCenter defaultCenter] removeObserver:self
                                                     name:ANYPlaybackResumeNotification
+                                                  object:nil];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:ANYNetworkInterruptionNotification
+                                                  object:nil];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:ANYNetworkResumeNotification
                                                   object:nil];
 }
 
@@ -54,8 +64,6 @@
     [super viewDidLoad];
     //self.title = @"不心疼";
     
-    _dataArray = [NSArray arrayWithContentsOfURL:[NSURL URLWithString:@"http://7xl2f9.com1.z0.glb.clouddn.com/play_list.plist"]];
-
     _player = [[ANYPlayer alloc] init];
     _player.delegate = self;
     
@@ -70,7 +78,21 @@
                                                object:nil];
     
     [self setupSubviews];
-    [self playNext];
+    
+    [[NetworkMonitor shardInstance] start];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(networkInterruption:)
+                                                 name:ANYNetworkInterruptionNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(networkResume:)
+                                                 name:ANYNetworkResumeNotification
+                                               object:nil];
+}
+
+- (void)loadData {
+    _dataArray = [NSArray arrayWithContentsOfURL:[NSURL URLWithString:@"http://7xl2f9.com1.z0.glb.clouddn.com/play_list.plist"]];
 }
 
 - (void)playNext {
@@ -100,6 +122,16 @@
     [playbackView sdc_alignEdgesWithSuperview:UIRectEdgeAll
                                        insets:UIEdgeInsetsMake(0.0f, 0.0f, 0.0f, 0.0f)];
     _playbackView = playbackView;
+    
+    _networkStatusLable = [Common generateLabelWithText:@"当前网络不可用，请检查你的网络设置"
+                                          textAlignment:NSTextAlignmentCenter
+                                                   font:FONT(15)
+                                              textColor:RGB(216, 212, 140)];
+    [self.view addSubview:_networkStatusLable];
+    [_networkStatusLable sdc_alignEdgesWithSuperview:UIRectEdgeTop | UIRectEdgeLeft | UIRectEdgeRight
+                                              insets:UIEdgeInsetsMake(20, 20, 0, -20)];
+    _networkStatusLable.alpha = 0.0f;
+    
 }
 
 - (void)loadPlayerItemMetaData:(NSDictionary *)metaData {
@@ -157,6 +189,44 @@
 - (void)playbackResume {
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.playbackView resume];
+    });
+}
+
+- (void)networkInterruption:(NSNotification *)notification {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [UIView animateWithDuration:0.3
+                         animations:^{
+                             self.networkStatusLable.alpha = 1.0f;
+                         }];
+        BOOL flag = [[notification object] boolValue];
+        [self.playbackView enable:NO];
+        if (flag) {
+            //首次打开没有网络
+            
+        } else {
+            //播放过程中没有有网络
+            [self.playbackView interrupt];
+            [self.player pause];
+        }
+    });
+}
+
+- (void)networkResume:(NSNotification *)notification {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [UIView animateWithDuration:0.3
+                         animations:^{
+                             self.networkStatusLable.alpha = 0.0f;
+                         }];
+        BOOL flag = [[notification object] boolValue];
+        [self.playbackView enable:YES];
+        if (!self.dataArray || flag) {
+            [self loadData];
+            [self playNext];
+        } else {
+            if (![self.player isPlaying]) {
+                [self.playbackView resume];
+            }
+        }
     });
 }
 

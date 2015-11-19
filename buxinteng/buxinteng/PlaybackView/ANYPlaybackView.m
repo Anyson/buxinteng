@@ -140,6 +140,11 @@
 
 }
 
+- (void)enable:(BOOL)enable {
+    self.playBtn.enabled = enable;
+    self.nextBtn.enabled = enable;
+}
+
 - (void)interrupt {
     _artworkView.alpha = 0.2f;
     _titleLabel.alpha = 0.2f;

@@ -22,17 +22,12 @@
 		160F76291BFB5F58002B34F4 /* CircleShapeLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 160F76281BFB5F58002B34F4 /* CircleShapeLayer.m */; };
 		160F762C1BFB625B002B34F4 /* ANYPlaybackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 160F762B1BFB625B002B34F4 /* ANYPlaybackView.m */; };
 		163C9B6F1BFD8A6E000F1D01 /* ANYQianQianLyricsDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 163C9B6E1BFD8A6E000F1D01 /* ANYQianQianLyricsDownloader.m */; };
-		163C9B711BFDA12F000F1D01 /* play_list.plist in Resources */ = {isa = PBXBuildFile; fileRef = 163C9B701BFDA12F000F1D01 /* play_list.plist */; };
 		163C9B751BFDA6C7000F1D01 /* PlayListManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 163C9B741BFDA6C7000F1D01 /* PlayListManager.m */; };
 		163C9B781BFE0F56000F1D01 /* ANYAudioSessionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 163C9B771BFE0F56000F1D01 /* ANYAudioSessionHandler.m */; };
+		163C9B7C1BFE2A34000F1D01 /* NetworkMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 163C9B7B1BFE2A34000F1D01 /* NetworkMonitor.m */; };
+		163C9B7F1BFE2E28000F1D01 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 163C9B7E1BFE2E28000F1D01 /* Reachability.m */; };
 		1653A3AC1BFCDFD000126B33 /* ANYMusicLRC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1653A3AB1BFCDFD000126B33 /* ANYMusicLRC.m */; };
 		1653A3AF1BFCE04400126B33 /* ANYMusicLRCView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1653A3AE1BFCE04400126B33 /* ANYMusicLRCView.m */; };
-		1653A3B91BFD40C600126B33 /* 陈慧琳-假天真.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 1653A3B41BFD40C600126B33 /* 陈慧琳-假天真.lrc */; };
-		1653A3BA1BFD40C600126B33 /* 陈奕迅-你给我听好.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 1653A3B51BFD40C600126B33 /* 陈奕迅-你给我听好.lrc */; };
-		1653A3BB1BFD40C600126B33 /* 方力申-好心好报.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 1653A3B61BFD40C600126B33 /* 方力申-好心好报.lrc */; };
-		1653A3BC1BFD40C600126B33 /* 林俊杰-那些你很冒险的梦.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 1653A3B71BFD40C600126B33 /* 林俊杰-那些你很冒险的梦.lrc */; };
-		1653A3BD1BFD40C600126B33 /* 周杰伦-龙卷风.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 1653A3B81BFD40C600126B33 /* 周杰伦-龙卷风.lrc */; };
-		1653A3BF1BFD451500126B33 /* 合唱歌曲-好心好报.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 1653A3BE1BFD451500126B33 /* 合唱歌曲-好心好报.lrc */; };
 		1653A3C21BFD4BAD00126B33 /* ANYLRCTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1653A3C11BFD4BAD00126B33 /* ANYLRCTableViewCell.m */; };
 /* End PBXBuildFile section */
 
@@ -85,21 +80,18 @@
 		160F762B1BFB625B002B34F4 /* ANYPlaybackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANYPlaybackView.m; sourceTree = "<group>"; };
 		163C9B6D1BFD8A6E000F1D01 /* ANYQianQianLyricsDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANYQianQianLyricsDownloader.h; sourceTree = "<group>"; };
 		163C9B6E1BFD8A6E000F1D01 /* ANYQianQianLyricsDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANYQianQianLyricsDownloader.m; sourceTree = "<group>"; };
-		163C9B701BFDA12F000F1D01 /* play_list.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = play_list.plist; sourceTree = "<group>"; };
 		163C9B731BFDA6C7000F1D01 /* PlayListManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayListManager.h; sourceTree = "<group>"; };
 		163C9B741BFDA6C7000F1D01 /* PlayListManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayListManager.m; sourceTree = "<group>"; };
 		163C9B761BFE0F56000F1D01 /* ANYAudioSessionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANYAudioSessionHandler.h; sourceTree = "<group>"; };
 		163C9B771BFE0F56000F1D01 /* ANYAudioSessionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANYAudioSessionHandler.m; sourceTree = "<group>"; };
+		163C9B7A1BFE2A34000F1D01 /* NetworkMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkMonitor.h; sourceTree = "<group>"; };
+		163C9B7B1BFE2A34000F1D01 /* NetworkMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkMonitor.m; sourceTree = "<group>"; };
+		163C9B7D1BFE2E28000F1D01 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		163C9B7E1BFE2E28000F1D01 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		1653A3AA1BFCDFD000126B33 /* ANYMusicLRC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANYMusicLRC.h; sourceTree = "<group>"; };
 		1653A3AB1BFCDFD000126B33 /* ANYMusicLRC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANYMusicLRC.m; sourceTree = "<group>"; };
 		1653A3AD1BFCE04400126B33 /* ANYMusicLRCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANYMusicLRCView.h; sourceTree = "<group>"; };
 		1653A3AE1BFCE04400126B33 /* ANYMusicLRCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANYMusicLRCView.m; sourceTree = "<group>"; };
-		1653A3B41BFD40C600126B33 /* 陈慧琳-假天真.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "陈慧琳-假天真.lrc"; sourceTree = "<group>"; };
-		1653A3B51BFD40C600126B33 /* 陈奕迅-你给我听好.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "陈奕迅-你给我听好.lrc"; sourceTree = "<group>"; };
-		1653A3B61BFD40C600126B33 /* 方力申-好心好报.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "方力申-好心好报.lrc"; sourceTree = "<group>"; };
-		1653A3B71BFD40C600126B33 /* 林俊杰-那些你很冒险的梦.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "林俊杰-那些你很冒险的梦.lrc"; sourceTree = "<group>"; };
-		1653A3B81BFD40C600126B33 /* 周杰伦-龙卷风.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "周杰伦-龙卷风.lrc"; sourceTree = "<group>"; };
-		1653A3BE1BFD451500126B33 /* 合唱歌曲-好心好报.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "合唱歌曲-好心好报.lrc"; sourceTree = "<group>"; };
 		1653A3C01BFD4BAD00126B33 /* ANYLRCTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANYLRCTableViewCell.h; sourceTree = "<group>"; };
 		1653A3C11BFD4BAD00126B33 /* ANYLRCTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANYLRCTableViewCell.m; sourceTree = "<group>"; };
 		200A1C186FABD082E75F702E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -158,6 +150,7 @@
 		160F75DD1BF825DB002B34F4 /* buxinteng */ = {
 			isa = PBXGroup;
 			children = (
+				163C9B791BFE2A06000F1D01 /* NetworkMonitor */,
 				163C9B721BFDA6A5000F1D01 /* PlayListManager */,
 				160F76221BFB5EDF002B34F4 /* PlaybackView */,
 				160F761E1BFACBE8002B34F4 /* Playback */,
@@ -178,15 +171,8 @@
 		160F75DE1BF825DB002B34F4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				1653A3BE1BFD451500126B33 /* 合唱歌曲-好心好报.lrc */,
-				1653A3B41BFD40C600126B33 /* 陈慧琳-假天真.lrc */,
-				1653A3B51BFD40C600126B33 /* 陈奕迅-你给我听好.lrc */,
-				1653A3B61BFD40C600126B33 /* 方力申-好心好报.lrc */,
-				1653A3B71BFD40C600126B33 /* 林俊杰-那些你很冒险的梦.lrc */,
-				1653A3B81BFD40C600126B33 /* 周杰伦-龙卷风.lrc */,
 				160F75DF1BF825DB002B34F4 /* main.m */,
 				160F761A1BF82A22002B34F4 /* buxinteng-prefix.pch */,
-				163C9B701BFDA12F000F1D01 /* play_list.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -268,6 +254,17 @@
 				163C9B741BFDA6C7000F1D01 /* PlayListManager.m */,
 			);
 			path = PlayListManager;
+			sourceTree = "<group>";
+		};
+		163C9B791BFE2A06000F1D01 /* NetworkMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				163C9B7D1BFE2E28000F1D01 /* Reachability.h */,
+				163C9B7E1BFE2E28000F1D01 /* Reachability.m */,
+				163C9B7A1BFE2A34000F1D01 /* NetworkMonitor.h */,
+				163C9B7B1BFE2A34000F1D01 /* NetworkMonitor.m */,
+			);
+			path = NetworkMonitor;
 			sourceTree = "<group>";
 		};
 		1653A3A91BFCDF9D00126B33 /* LrcView */ = {
@@ -409,15 +406,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1653A3BC1BFD40C600126B33 /* 林俊杰-那些你很冒险的梦.lrc in Resources */,
-				1653A3BB1BFD40C600126B33 /* 方力申-好心好报.lrc in Resources */,
-				1653A3BF1BFD451500126B33 /* 合唱歌曲-好心好报.lrc in Resources */,
 				160F75EE1BF825DB002B34F4 /* LaunchScreen.storyboard in Resources */,
-				1653A3B91BFD40C600126B33 /* 陈慧琳-假天真.lrc in Resources */,
-				163C9B711BFDA12F000F1D01 /* play_list.plist in Resources */,
-				1653A3BA1BFD40C600126B33 /* 陈奕迅-你给我听好.lrc in Resources */,
 				160F75EB1BF825DB002B34F4 /* Assets.xcassets in Resources */,
-				1653A3BD1BFD40C600126B33 /* 周杰伦-龙卷风.lrc in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,8 +493,10 @@
 				163C9B751BFDA6C7000F1D01 /* PlayListManager.m in Sources */,
 				1653A3AC1BFCDFD000126B33 /* ANYMusicLRC.m in Sources */,
 				1653A3AF1BFCE04400126B33 /* ANYMusicLRCView.m in Sources */,
+				163C9B7C1BFE2A34000F1D01 /* NetworkMonitor.m in Sources */,
 				163C9B6F1BFD8A6E000F1D01 /* ANYQianQianLyricsDownloader.m in Sources */,
 				160F76211BFACC1F002B34F4 /* ANYPlayer.m in Sources */,
+				163C9B7F1BFE2E28000F1D01 /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
