@@ -11,6 +11,7 @@
 #import "ANYPlaybackView.h"
 #import <UIView+SDCAutoLayout.h>
 #import "ANYQianQianLyricsDownloader.h"
+#import "ANYAudioSessionHandler.h"
 
 @import MediaPlayer;
 
@@ -26,6 +27,16 @@
 @end
 
 @implementation MainViewController
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:ANYPlaybackInterruptionNotification
+                                                  object:nil];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:ANYPlaybackResumeNotification
+                                                  object:nil];
+}
 
 - (void)viewDidAppear:(BOOL)animated {
     //    接受远程控制
@@ -47,6 +58,16 @@
 
     _player = [[ANYPlayer alloc] init];
     _player.delegate = self;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(playbackInterruption)
+                                                 name:ANYPlaybackInterruptionNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(playbackResume)
+                                                 name:ANYPlaybackResumeNotification
+                                               object:nil];
     
     [self setupSubviews];
     [self playNext];
@@ -126,6 +147,19 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - notification action
+- (void)playbackInterruption {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.playbackView interrupt];
+    });
+}
+
+- (void)playbackResume {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.playbackView resume];
+    });
+}
+
 #pragma mark - ANYPlayer delegate
 - (void)player:(ANYPlayer *)player readyToPlay:(NSDictionary *)commonMetaData {
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -183,30 +217,32 @@
 
 #pragma mark - remote control received
 - (void)remoteControlReceivedWithEvent:(UIEvent *)event {
-    if (event.type == UIEventTypeRemoteControl) {  //判断是否为远程控制
-        switch (event.subtype) {
-            case  UIEventSubtypeRemoteControlPlay:
-                if (![self.player isPlaying]) {
-                    [self.playbackView playOrPause];
-                }
-
-                break;
-            case UIEventSubtypeRemoteControlPause:
-                if ([self.player isPlaying]) {
-                     [self.playbackView playOrPause];
-                }
-                break;
-            case UIEventSubtypeRemoteControlNextTrack:
-                [self playbackViewPressNextBtn:self.playbackView];
-                NSLog_DEBUG(@"下一首");
-                break;
-            case UIEventSubtypeRemoteControlPreviousTrack:
-                NSLog_DEBUG(@"上一首 ");
-                break;
-            default:
-                break;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (event.type == UIEventTypeRemoteControl) {  //判断是否为远程控制
+            switch (event.subtype) {
+                case  UIEventSubtypeRemoteControlPlay:
+                    if (![self.player isPlaying]) {
+                        [self.playbackView playOrPause];
+                    }
+                    
+                    break;
+                case UIEventSubtypeRemoteControlPause:
+                    if ([self.player isPlaying]) {
+                        [self.playbackView playOrPause];
+                    }
+                    break;
+                case UIEventSubtypeRemoteControlNextTrack:
+                    [self playbackViewPressNextBtn:self.playbackView];
+                    NSLog_DEBUG(@"下一首");
+                    break;
+                case UIEventSubtypeRemoteControlPreviousTrack:
+                    NSLog_DEBUG(@"上一首 ");
+                    break;
+                default:
+                    break;
+            }
         }
-    }
+    });
 }
 
 @end

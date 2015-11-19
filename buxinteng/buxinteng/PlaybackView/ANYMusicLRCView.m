@@ -58,8 +58,13 @@
     [_tableView registerClass:[ANYLRCTableViewCell class]
        forCellReuseIdentifier:@"ANYLRCTableViewCell"];
     
+    float offset = 0;
+    if (IS_IPHONE_4S) {
+        offset = -10;
+    }
+    
     [_tableView sdc_alignEdgesWithSuperview:UIRectEdgeAll
-                                     insets:UIEdgeInsetsMake(20, 0, -20, 0) ];
+                                     insets:UIEdgeInsetsMake(20 + offset, 0, -20 - offset, 0) ];
 }
 
 - (void)updateLrc {
@@ -83,7 +88,6 @@
                                                userInfo:nil
                                                 repeats:NO];
         _beginTime = [[NSDate date] timeIntervalSince1970] * 1000;
-        NSLog_DEBUG(@"");
     }
 }
 

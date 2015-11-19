@@ -9,6 +9,7 @@
 #import "ANYPlayer.h"
 @import AVFoundation;
 
+#import "ANYAudioSessionHandler.h"
 
 @interface ANYPlayer () {
 //    dispatch_queue_t _enumerationQueue;
@@ -30,11 +31,8 @@
 //        _enumerationQueue = dispatch_queue_create("Browser Enumeration Queue", DISPATCH_QUEUE_SERIAL);
 //        dispatch_set_target_queue(_enumerationQueue, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0));
         
-        NSError *sessionError = nil;
-        [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:&sessionError];
-        
+        [ANYAudioSessionHandler sharedInstance];
         _player = [[AVQueuePlayer alloc] init];
-        
     
     }
     return self;

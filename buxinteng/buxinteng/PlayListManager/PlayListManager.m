@@ -8,7 +8,21 @@
 
 #import "PlayListManager.h"
 
+@interface PlayListManager ()
+
+@end
+
 @implementation PlayListManager
+
++ (PlayListManager *)sharedInstance {
+    static PlayListManager *manager = nil;
+    static dispatch_once_t t;
+    dispatch_once(&t, ^{
+        manager = [[PlayListManager alloc] init];
+    });
+    
+    return manager;
+}
 
 - (instancetype)init
 {

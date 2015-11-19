@@ -10,4 +10,6 @@
 
 @interface PlayListManager : NSObject
 
++ (PlayListManager *)sharedInstance;
+
 @end

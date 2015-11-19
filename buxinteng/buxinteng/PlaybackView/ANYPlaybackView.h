@@ -31,6 +31,8 @@
 
 @property(nonatomic, strong) ANYMusicLRCView    *lrcView;
 
+- (void)interrupt;
+- (void)resume;
 - (void)playOrPause;
 
 @end

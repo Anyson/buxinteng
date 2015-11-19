@@ -29,16 +29,26 @@
 
 - (void)setupViews {
     
+    float offsetY = 0;
+    float offsetY2 = 0;
+    if (IS_IPHONE_4S) {
+        offsetY = -45;
+        offsetY2 = -20;
+    } else if (IS_IPHONE_5) {
+        offsetY = -40;
+        offsetY2 = -10;
+    }
+    
     UILabel *appTitleLabel = [Common generateLabelWithText:@"不心疼随心听"
                                              textAlignment:NSTextAlignmentCenter
                                                       font:FONT(30)
                                                  textColor:RGB_PRIMARY];
     [self addSubview:appTitleLabel];
     [appTitleLabel sdc_alignEdgesWithSuperview:UIRectEdgeTop | UIRectEdgeLeft | UIRectEdgeRight
-                                        insets:UIEdgeInsetsMake(0, 0, 0, 0)];
-    [appTitleLabel sdc_pinHeight:130];
+                                        insets:UIEdgeInsetsMake(20, 0, 0, 0)];
+    [appTitleLabel sdc_pinHeight:100 + offsetY];
     
-    _artworkView = [[UIImageView alloc] initWithFrame:CGRectMake((SCREEN_WIDTH - 150) / 2, 130, 150, 150)];
+    _artworkView = [[UIImageView alloc] initWithFrame:CGRectMake((SCREEN_WIDTH - 150) / 2, 130 + offsetY, 150, 150)];
     [_artworkView setImage:IMAGE(@"noArt")];
     _artworkView.layer.cornerRadius = 75.0f;
     _artworkView.layer.masksToBounds = YES;
@@ -59,7 +69,7 @@
                                       textColor:RGBA(0, 0, 0, 0.8)];
     [self addSubview:_titleLabel];
     [_titleLabel sdc_alignEdgesWithSuperview:UIRectEdgeTop | UIRectEdgeLeft | UIRectEdgeRight
-                                        insets:UIEdgeInsetsMake(320, 0, 0, 0)];
+                                        insets:UIEdgeInsetsMake(320 + offsetY + offsetY2, 0, 0, 0)];
     
     _artistLabel = [Common generateLabelWithText:@""
                                    textAlignment:NSTextAlignmentCenter
@@ -67,7 +77,7 @@
                                        textColor:RGB_TEXT_COLOR];
     [self addSubview:_artistLabel];
     [_artistLabel sdc_alignEdgesWithSuperview:UIRectEdgeTop | UIRectEdgeLeft | UIRectEdgeRight
-                                      insets:UIEdgeInsetsMake(355, 0, 0, 0)];
+                                      insets:UIEdgeInsetsMake(355 + offsetY + offsetY2, 0, 0, 0)];
     
     
     _playBtn = [Common generateButtonWithTarget:self
@@ -93,7 +103,7 @@
     [self addSubview:_nextBtn];
     
     [_nextBtn sdc_alignEdgesWithSuperview:UIRectEdgeBottom
-                                   insets:UIEdgeInsetsMake(0, 0, -60, 0)];
+                                   insets:UIEdgeInsetsMake(0, 0, -60 - offsetY, 0)];
     [_nextBtn sdc_horizontallyCenterInSuperviewWithOffset:SCREEN_WIDTH / 4];
     
     UIButton *heartBtn = [Common generateButtonWithTarget:self
@@ -104,7 +114,7 @@
               forState:UIControlStateSelected];
     [self addSubview:heartBtn];
     [heartBtn sdc_alignEdgesWithSuperview:UIRectEdgeBottom
-                                   insets:UIEdgeInsetsMake(0, 0, -60, 0)];
+                                   insets:UIEdgeInsetsMake(0, 0, -60 - offsetY, 0)];
     [heartBtn sdc_horizontallyCenterInSuperviewWithOffset:-SCREEN_WIDTH / 4];
     
     UIButton *deleteBtn = [Common generateButtonWithTarget:self
@@ -113,7 +123,7 @@
               forState:UIControlStateNormal];
     [self addSubview:deleteBtn];
     [deleteBtn sdc_alignEdgesWithSuperview:UIRectEdgeBottom
-                                   insets:UIEdgeInsetsMake(0, 0, -60, 0)];
+                                   insets:UIEdgeInsetsMake(0, 0, -60 - offsetY, 0)];
     [deleteBtn sdc_horizontallyCenterInSuperview];
     
     _lrcView = [[ANYMusicLRCView alloc] init];
@@ -130,6 +140,27 @@
 
 }
 
+- (void)interrupt {
+    _artworkView.alpha = 0.2f;
+    _titleLabel.alpha = 0.2f;
+    _artistLabel.alpha = 0.2f;
+    _lrcView.alpha = 0.2f;
+    [_lrcView pauseLrc];
+    _playBtn.selected = NO;
+}
+
+- (void)resume {
+    _artworkView.alpha = 1.0f;
+    _titleLabel.alpha = 1.0f;
+    _artistLabel.alpha = 1.0f;
+    _lrcView.alpha = 1.0f;
+    [_lrcView continueLrc];
+    
+    if ([self.delegate respondsToSelector:@selector(playbackViewPressPlayBtn:)]) {
+        [self.delegate playbackViewPressPlayBtn:self];
+    }
+}
+
 - (void)playOrPause {
     [self playBtnAction:_playBtn];
 }
@@ -140,11 +171,13 @@
         _artworkView.alpha = 0.2f;
         _titleLabel.alpha = 0.2f;
         _artistLabel.alpha = 0.2f;
+        _lrcView.alpha = 0.2f;
         [_lrcView pauseLrc];
     } else {
         _artworkView.alpha = 1.0f;
         _titleLabel.alpha = 1.0f;
         _artistLabel.alpha = 1.0f;
+        _lrcView.alpha = 1.0f;
         [_lrcView continueLrc];
     }
     
@@ -156,6 +189,11 @@
 - (void)nextBtnAction:(id)sender {
     if ([self.delegate respondsToSelector:@selector(playbackViewPressNextBtn:)]) {
         [self.delegate playbackViewPressNextBtn:self];
+        
+        _artworkView.alpha = 1.0f;
+        _titleLabel.alpha = 1.0f;
+        _artistLabel.alpha = 1.0f;
+        _lrcView.alpha = 1.0f;
     }
 }
 
@@ -164,7 +202,14 @@
 }
 
 - (void)deleteBtnAction:(id)sender {
-    
+    if ([self.delegate respondsToSelector:@selector(playbackViewPressNextBtn:)]) {
+        [self.delegate playbackViewPressNextBtn:self];
+        
+        _artworkView.alpha = 1.0f;
+        _titleLabel.alpha = 1.0f;
+        _artistLabel.alpha = 1.0f;
+        _lrcView.alpha = 1.0f;
+    }
 }
 
 /*
