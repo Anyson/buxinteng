@@ -131,6 +131,7 @@
 
 - (void)reloadLRC:(NSString *)lrc {
     [self.musicLrc reloadWithLRC:lrc];
+    [self.tableView reloadData];
     _isBeginning = NO;
 }
 
@@ -146,7 +147,6 @@
     }
 
     _isBeginning = YES;
-    [self.tableView reloadData];
     
     int i = 0;
     //找到时间最近的歌词

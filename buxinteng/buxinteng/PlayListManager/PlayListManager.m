@@ -8,7 +8,7 @@
 
 #import "PlayListManager.h"
 
-#define DATA_URL_PATH @"http://7xl2f9.com1.z0.glb.clouddn.com/play_list.plist"
+#define DATA_URL_PATH @"http://7xoear.com1.z0.glb.clouddn.com/play_list.plist"
 
 #define LOVE_TRACKS_FILE_NAME @"love_tracks_list.plist"
 #define HATE_TRACKS_FILE_NAME @"hate_tracks_list.plist"
@@ -71,6 +71,9 @@
     }
     
     NSArray *array = [NSArray arrayWithContentsOfURL:[NSURL URLWithString:DATA_URL_PATH]];
+    if (array == nil || [array count] <= 0) {
+        array = [NSArray arrayWithContentsOfURL:[NSURL URLWithString:DATA_URL_PATH]];
+    }
     _playList = [NSMutableArray array];
     PlayListItem *item;
     for (NSDictionary *dict in array) {
@@ -98,8 +101,17 @@
     if (item.lrcText && ![item.lrcText isEqualToString:@""]) {
         return item.lrcText;
     }
-    NSString *lrcText = [[NSString alloc] initWithContentsOfURL:[item lrcUrl] encoding:NSUTF8StringEncoding error:nil];
+    NSError *error;
+    NSString *lrcText = [[NSString alloc] initWithContentsOfURL:[item lrcUrl] encoding:NSUTF8StringEncoding error:&error];
     [item resetLrcText:lrcText];
+    
+    if (error) {
+        NSData *data = [NSData dataWithContentsOfURL:item.lrcUrl];
+        NSStringEncoding enc = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
+        lrcText = [[NSString alloc] initWithData:data encoding:enc];
+        [item resetLrcText:lrcText];
+
+    }
     return lrcText;
 }
 
