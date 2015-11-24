@@ -8,13 +8,35 @@
 
 #import "PlayListManager.h"
 
-#define DATA_URL_PATH @"http://7xoear.com1.z0.glb.clouddn.com/play_list.plist"
+#define DATA_URL_PATH @"http://7xomoh.com1.z0.glb.clouddn.com/play_list.plist?attname="
 
 #define LOVE_TRACKS_FILE_NAME @"love_tracks_list.plist"
 #define HATE_TRACKS_FILE_NAME @"hate_tracks_list.plist"
 
+@interface NSMutableArray (Shuffling)
+- (void)shuffle;
+@end
+
+@implementation NSMutableArray (Shuffling)
+
+- (void)shuffle
+{
+    NSUInteger count = [self count];
+    for (NSUInteger i = 0; i < count; ++i) {
+        // Select a random element between i and end of array to swap with.
+        NSInteger nElements = count - i;
+        NSInteger n = (arc4random() % nElements) + i;
+        [self exchangeObjectAtIndex:i withObjectAtIndex:n];
+    }
+}
+
+@end
+
+
 @interface PlayListManager () {
     dispatch_queue_t _fileQueue;
+    
+    int _current_index;
 }
 
 @property(nonatomic, strong) NSMutableArray *playList;
@@ -53,6 +75,7 @@
                            stringByAppendingPathComponent:LOVE_TRACKS_FILE_NAME];
         _hateFilePath = [[paths objectAtIndex:0]
                            stringByAppendingPathComponent:HATE_TRACKS_FILE_NAME];
+        _current_index = 0;
     }
     return self;
 }
@@ -87,13 +110,18 @@
         }
         [_playList addObject:item];
     }
+    
+    //打乱顺序
+    [_playList shuffle];
 }
 
 - (PlayListItem *)getRandomItem {
-    if (_playList.count <= 0) {
-        return nil;
-    }
-    int index = arc4random() % _playList.count;
+//    if (_playList.count <= 0) {
+//        return nil;
+//    }
+//    int index = arc4random() % _playList.count;
+    int index = _current_index;
+    _current_index++;
     return [_playList objectAtIndex:index];
 }
 
